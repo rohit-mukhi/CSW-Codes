@@ -2,14 +2,31 @@
 public class Program_1 {
     static int x=10;
     static int y=20;
+
     int x1;
     int y1;
+
+    private static int x2 = 50;
 
     public static void main(String[] args) {
         System.out.println("x = " + x + " y = " + y);
         Test obj = new Test();
         obj.x1 = 10;
         obj.y1 = 20;
-        System.out.println("x = " + obj.x1 + " y = " + obj.y1);
+        System.out.println("x1 = " + obj.x1 + " y1 = " + obj.y1);
+        System.out.println("x2 = " + x2);
+        initializeX();
+        initializeY();
+        System.out.println("x = " + x + " y = " + y);
     }
+
+    public static void initializeX() {
+        x = 90;
+    }
+
+    public static void initializeY() {
+        y = 120;
+    }
+
+
 }
