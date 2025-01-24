@@ -18,6 +18,8 @@ public class Program_1 {
         initializeX();
         initializeY();
         System.out.println("x = " + x + " y = " + y);
+        initialize(499, 599);
+        System.out.println("x = " + x + " y = " + y);
     }
 
     public static void initializeX() {
@@ -28,5 +30,8 @@ public class Program_1 {
         y = 120;
     }
 
-
+    public static void initialize(int a, int b) {
+        x = a;
+        y = b;
+    }
 }
