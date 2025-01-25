@@ -1,0 +1,17 @@
+public class Program_3 {
+    public static void main(String[] args) {
+        Implementable obj = new Implementable(36);
+        obj.display();
+    }    
+}
+
+class Implementable {
+    int val;
+    Implementable(int val) {
+        this.val = val;
+    }
+
+    void display() {
+        System.out.println(val);
+    }
+}
