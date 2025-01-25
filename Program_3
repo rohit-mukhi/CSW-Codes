@@ -1,17 +1,24 @@
 public class Program_3 {
     public static void main(String[] args) {
         Implementable obj = new Implementable(36);
+        obj.initialize(51);
         obj.display();
     }    
 }
 
 class Implementable {
     int val;
+    int data;
     Implementable(int val) {
         this.val = val;
     }
 
+    void initialize(int data) {
+        this.data = data;
+    }
+
     void display() {
         System.out.println(val);
+        System.out.println(data);
     }
 }
