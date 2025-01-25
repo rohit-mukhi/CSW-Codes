@@ -1,0 +1,21 @@
+public class Program_5 {    
+    public static void main(String[] args) {
+        newClass obj1 = new newClass();
+        newClass obj2 = new newClass();
+        obj1.val = 10;
+        obj2.val = 20;
+        System.out.println("Value in obj1 is : " + obj1.val);
+
+        obj1.data = 36;
+        obj2.data = 51;
+        System.out.println("Data in obj1 is : " + obj1.data);
+    }
+}
+
+class newClass {
+    static int val;
+    // The value of variable val changed as it was declared static. So I used two objects to change the value of one variable.
+    int data;
+    // The above variable is not static so, it was not updated when data was changed in another object.
+}
+
