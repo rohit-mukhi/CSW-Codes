@@ -5,10 +5,12 @@ public class Program_5 {
         obj1.val = 10;
         obj2.val = 20;
         System.out.println("Value in obj1 is : " + obj1.val);
+        System.out.println("Value in obj2 is : " + obj2.val);
 
-        obj1.data = 36;
-        obj2.data = 51;
+        obj1.data = 10;
+        obj2.data = 20;
         System.out.println("Data in obj1 is : " + obj1.data);
+        System.out.println("Data in obj2 is : " + obj2.data);
     }
 }
 
