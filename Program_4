@@ -1,0 +1,19 @@
+public class Program_4 {
+    public static void main(String[] args) {
+        Test obj = new Test();    
+    }    
+}
+
+class Test {
+    static {
+        System.out.println("Hello from static block");
+    }
+
+    static void value() {
+        System.out.println("Hello from static method");
+    }
+
+    Test() {
+        System.out.println("Hello from constructor");
+    }
+}
