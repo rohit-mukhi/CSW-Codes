@@ -1,0 +1,20 @@
+public class Program_6 {
+    public static void main(String[] args) {
+        Model obj1 = new Model();
+        Model obj2 = new Model();
+        obj1.x = 10;
+        obj2.x = 20;
+        Model obj3 = new Model();
+        obj3 = obj3.display(obj1, obj2);
+        System.out.println(obj3.x);
+    }
+}   
+
+class Model {
+    int x;
+    Model display(Model obj1, Model obj2) {
+        Model obj = new Model();
+        obj.x = obj1.x + obj2.x;
+        return obj;
+    }
+}
