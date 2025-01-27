@@ -1,0 +1,9 @@
+child to parent relatioship is a 'is-a' relationship
+
+example let there be a class called animal and it has a class called cow.
+cow and animal is a 'is-a' relationship. because cow "is a" animal
+
+If car is a class then another class is engine. Then engine class has 'has-a' relationship.
+has-a relation is a closed relationship
+
+// Try to find more about this
