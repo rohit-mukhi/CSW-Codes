@@ -1,2 +1,2 @@
-# CSW-Codes
-CSW lab codes
+# CSW-2-Codes
+CSW-2 lab codes
