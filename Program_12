@@ -1,0 +1,43 @@
+// This is an example of 'has-a' relationship
+// boy has a favourite food, favourite sport
+public class Program_12 {
+    public static void main(String[] args) {
+        Boy person = new Boy();
+        person.enterFood("Dosa");
+        person.enterSport("Cricket");
+        person.printLikes();
+
+    }
+}
+
+class Boy {
+    Food food_answer;
+    Sport sport_answer;
+
+    void enterFood(String food) {
+        food_answer = new Food(food);
+    }
+
+    void enterSport(String sport) {
+        sport_answer = new Sport(sport);
+    }
+
+    void printLikes() {
+        System.out.println("Favourite food: " + food_answer.foodtxt);
+        System.out.println("Favourite sport : " + sport_answer.sporttxt);
+    }
+}
+
+class Food {
+    String foodtxt;
+    Food(String foodtxt) {
+        this.foodtxt = foodtxt;
+    }
+}
+
+class Sport {
+    String sporttxt;
+    Sport(String sporttxt) {
+        this.sporttxt = sporttxt;
+    }
+}
