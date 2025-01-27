@@ -1,0 +1,37 @@
+// This is example of 'is-a' relationship
+// Here bread is a grocery and butter is a grocery
+public class Program_11 {
+    public static void main(String[] args) {
+        Bread obj1 = new Bread(20, 4);
+        Butter obj2 = new Butter(10, 3);
+        Grocery obj3 = new Grocery();
+        obj3.bill = obj1.bill + obj2.bill;
+        System.out.println("Your bill : " + obj3.printBill()); 
+    }
+}
+
+class Grocery {
+    int price;
+    int quantity;
+    double bill;
+    double printBill() {
+        return bill;
+    }
+
+}
+
+class Bread extends Grocery {
+    Bread(int price, int quantity) {
+        this.price = price;
+        this.quantity = quantity;
+        bill += price*quantity;
+    }
+}
+
+class Butter extends Grocery {
+    Butter(int price, int quantity) {
+        this.price = price;
+        this.quantity = quantity;
+        bill += price*quantity;
+    }
+}
