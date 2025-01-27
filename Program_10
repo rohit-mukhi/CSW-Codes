@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Program_10 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter message: ");
+        String message = scan.nextLine();
+        Message obj = new Message(message);
+        Receiver person2 = new Receiver();
+        Sender person1 = new Sender();
+        person1.sendMessage(obj, person2);
+        person2.printMessage();
+        scan.close();
+    }    
+}
+
+class Message {
+    String text;
+    Message(String message) {
+        text = message;
+    }
+}
+
+class Sender {
+    void sendMessage(Message answer, Receiver receiver) {
+        receiver.message = answer.text;
+    }
+}
+
+class Receiver {
+    String message;
+    void printMessage() {
+        System.out.println("Message received successfully!");
+        System.out.println("Message : " + message);
+    }
+}
