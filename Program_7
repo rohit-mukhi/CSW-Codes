@@ -1,0 +1,25 @@
+public class Program_7 {
+    public static void main(String[] args) {
+        Model.func1();
+        Model obj = new Model();
+        obj.func2();
+    }
+}
+
+class Model {
+    int val = 15;
+    static int data = 20;
+    static void func1() {
+        int x = 10;
+        System.out.println(x);
+        // Local variables have no effect
+        //System.out.println(val);
+        // Cannot use non-static instance variable in a static method
+    }
+
+    void func2() {
+        System.out.println(val);
+        System.out.println(data);
+        // This shows that in a non-static method it does not matter whether it has a static/non-static variables
+    }
+}
