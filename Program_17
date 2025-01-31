@@ -1,0 +1,33 @@
+// Single inheritance using super keyword
+public class Program_17 {
+    public static void main(String[] args) {
+        Xbox obj = new Xbox();
+        obj.setName("Xbox One", "gaming");
+        System.out.println("The function of " + obj.getName() + " is " + obj.getFunction());
+    }
+}
+
+class Xbox extends Console {
+    String name;
+    
+    void setName(String name, String function) {
+        this.name = name;
+        super.function = function;
+    }
+
+    String getName() {
+        return name;
+    }
+
+}
+
+class Console {
+    String function;
+    Console(String Function) {
+        this.function = function;
+    } 
+
+    String getFunction() {
+        return function;
+    }
+}
