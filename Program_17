@@ -2,16 +2,15 @@
 // Check this code as there is some error
 public class Program_17 {
     public static void main(String[] args) {
-        Xbox obj = new Xbox();
-        obj.setName("Xbox One", "gaming");
+        Xbox obj = new Xbox("Xbox One", "gaming");
         System.out.println("The function of " + obj.getName() + " is " + obj.getFunction());
     }
 }
 
 class Xbox extends Console {
     String name;
-    
-    void setName(String name, String function) {
+
+    Xbox(String name, String function) {
         super(function);
         this.name = name;
     }
