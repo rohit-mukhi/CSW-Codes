@@ -1,0 +1,27 @@
+public class Program_13 {
+    public static void main(String[] args) {
+        Player name = new Player("Virat Kohli");
+        Brand brand = new Brand("Wrogn");
+        System.out.println(name.getName() + " uses the brand " + brand.getBrand());
+    }    
+}
+
+class Player {
+    String name;
+    Player(String name) {
+        this.name = name;
+    }
+    String getName() {
+        return name;
+    }
+}
+
+class Brand {
+    String name;
+    Brand(String name) {
+        this.name = name;
+    }
+    String getBrand() {
+        return name;
+    }
+}
