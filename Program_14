@@ -1,0 +1,31 @@
+// This code is example of aggregation relationship
+
+public class Program_14 {
+    public static void main(String[] args) {
+        College college = new College("ITER");
+        Dean dean = new Dean("Elon Musk");
+        college.getDetails(dean);
+    }
+}
+
+class College {
+    String name;
+    College(String name) {
+        this.name = name;
+    }
+
+    void getDetails(Dean dean) {
+        System.out.println("The Dean of " + name + " is " + dean.getDean());
+    }
+}
+
+class Dean {
+    String name;
+    Dean(String name) {
+        this.name = name;
+    }
+
+    String getDean() {
+        return name;
+    }
+}
