@@ -1,0 +1,46 @@
+// This is multi-level inheritance
+
+public class Program_18 {
+    public static void main(String[] args) {
+        NagpuriOrange obj = new NagpuriOrange("Nagpuri Orange", "Orange", "Large");
+        System.out.println("Fruit type : " + obj.type);
+        System.out.println("Fruit name : " + obj.getName());
+        System.out.println("Size : " + obj.size);
+    }
+}
+
+class Fruit {
+    String type;
+    Fruit(String type) {
+        this.type = type;
+    }
+    String getType() {
+        return type;
+    }
+}
+
+class Orange extends Fruit {
+    String name;
+
+    Orange(String name, String type) {
+        super(type);
+        this.name = name;
+    }
+
+    String getName() {
+        return name;
+    }
+}
+
+class NagpuriOrange extends Orange {
+    String size;
+
+    NagpuriOrange(String name, String type, String size) {
+        super(name, type);
+        this.size = size;
+    }
+
+    String getSize() {
+        return size;
+    }
+}
