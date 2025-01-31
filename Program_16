@@ -1,0 +1,25 @@
+public class Program_16 {
+    public static void main(String[] args) {
+        Employee obj = new Employee();
+        obj.setDetails("Sundar Pichai", 666);
+        obj.getDetails();
+    }
+}
+// All classes except the public type is default type 
+class Employee {
+    String name;
+    int id;
+
+    Employee() {
+    }
+
+    void setDetails(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    void getDetails() {
+        System.out.println("Name : " + name);
+        System.out.println("ID : " + id);
+    }
+}
