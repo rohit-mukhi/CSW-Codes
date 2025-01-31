@@ -1,0 +1,43 @@
+public class Program_19 {
+    public static void main(String[] args) {
+        Apple apple = new Apple("Apple", "sweet");
+        Grapes grapes = new Grapes("Grapes", "sour");
+        System.out.println(apple.getName() + " are " + apple.getTaste());
+        System.out.println(grapes.getName() + " are " + grapes.getTaste());
+    }    
+}
+
+class Fruit {
+    String taste;
+    Fruit(String taste) {
+        this.taste = taste;
+    }
+
+    String getTaste() {
+        return taste;
+    }
+}
+
+class Apple extends Fruit {
+    String name;
+    Apple(String name, String taste) {
+        super(taste);
+        this.name = name;
+    }
+
+    String getName() {
+        return name;
+    }
+}
+
+class Grapes extends Fruit {
+    String name;
+    Grapes(String name, String taste) {
+        super(taste);
+        this.name = name;
+    }
+
+    String getName() {
+        return name;
+    }
+}
