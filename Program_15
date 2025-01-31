@@ -1,0 +1,33 @@
+// This is example of composition type relationship
+
+public class Program_15 {
+    public static void main(String[] args) {
+        Car car = new Car("Aston Martin");
+        car.getDetails();
+    }
+}
+
+class Engine {
+    String type;
+    Engine(String type) {
+        this.type = type;
+    }
+
+    String getType() {
+        return type;
+    }
+}
+
+class Car {
+    String brand;
+    Engine type;
+
+    Car(String brand) {
+        this.brand = brand;
+        this.type = new Engine("V-12");
+    }
+
+    void getDetails() {
+        System.out.println(brand + " has a " + type.getType() + " engine.");
+    }
+}
