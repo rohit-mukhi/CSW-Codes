@@ -1,4 +1,5 @@
 // Single inheritance using super keyword
+// Check this code as there is some error
 public class Program_17 {
     public static void main(String[] args) {
         Xbox obj = new Xbox();
