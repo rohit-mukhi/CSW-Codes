@@ -1,0 +1,31 @@
+// This is example of method overloading
+
+public class Program_20 {
+    public static void main(String[] args) {
+        Area obj = new Area();  
+        System.out.println("Area of circle : " + obj.area(3));
+        System.out.println("Area of rectangle : " + obj.area(3, 4));
+        System.out.println("Area of triangle : " + obj.area(10, 20, 30));
+        System.out.println("Area of square : " + obj.area(4.0));
+    }    
+}
+
+class Area {
+    double area(int radius) {
+        return (Math.PI * Math.pow(radius, 2));
+    }
+
+    double area(int length, int breadth) {
+        return length * breadth;
+    }
+
+    double area(double side) {
+        return side*side;
+    }
+
+    double area(int side1, int side2, int side3) {
+        double sp = (side1 + side2 + side3)/2;
+        double pro = sp * (sp - side1) * (sp-side2) * (sp-side3);
+        return Math.sqrt(pro);
+    }
+}
