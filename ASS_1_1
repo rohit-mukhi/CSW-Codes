@@ -1,3 +1,4 @@
+// Replace class name with CarTester
 public class ASS_1_1 {
     public static void main(String[] args) {
         Car myCar1 = new Car("Tata", "Nano");
