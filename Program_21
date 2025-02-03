@@ -1,10 +1,10 @@
 // Research ways to call show method from parent class
-// Learn about dynamic dispatch
+// Learn about dynamic dispatch in java
 
 public class Program_21 {
     public static void main(String[] args) {
-        Child obj = new Child();
-        obj.show();
+        //Child obj = new Child();
+        //obj.show();
         // Simplest way to call method of parent class is to create an object of parent class and then call it
 
         // Lets see concept of casting to achieve the previous result
@@ -13,6 +13,16 @@ public class Program_21 {
         // objc is not a pure object. It can only access those methods that are overidden
         objp.show();
         objc.show();
+        // The above is upcasting
+
+        // Now lets see the concept of downcasting
+        Child child = (Child) objc;
+        // This will help in accessing only the methods of child
+        // Child child = (Child) objp; is not possible
+
+        child.show();
+        // Not Working so see what to do later
+        // Just know that before downcasting, you must first upcast
     }
 }
 
