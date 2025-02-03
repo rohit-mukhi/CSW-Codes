@@ -1,15 +1,16 @@
+// Avoid extra sops
 public class ASS_1_2 {
     public static void main(String[] args) {
         Rectangle obj = new Rectangle(2, 3);
-        obj.area();
-        obj.perimeter();
-
+        System.out.println("Area = " + obj.area(obj.getLength(), obj.getWidth()));
+        System.out.println("Perimeter = " + obj.perimeter(obj.getLength(), obj.getWidth()));
+        System.out.println();
         obj.setLength(98.7);
         obj.setWidth(56.98);
-        obj.getWidth();
         obj.getLength();
-        obj.area();
-        obj.perimeter();
+        obj.getWidth();
+        System.out.println("Area = " + obj.area(obj.getLength(), obj.getWidth()));
+        System.out.println("Perimeter = " + obj.perimeter(obj.getLength(), obj.getWidth()));
     }
 }
 
@@ -30,19 +31,19 @@ class Rectangle {
         this.width = width;
     }
 
-    void getLength() {
-        System.out.println("Length is : " + length);
+    double getLength() {
+        return length;
     }
 
-    void getWidth() {
-        System.out.println("Width is : " + width);
+    double getWidth() {
+        return (width);
     }
 
-    void area() {
-        System.out.println("Area = " + (length*width));
+    double area(double length, double width) {
+        return (length*width);
     }
 
-    void perimeter() {
-        System.out.println("Perimeter = " + (2*(length+width)));
+    double perimeter(double length, double width) {
+        return (2*(length+width));
     }
 }
