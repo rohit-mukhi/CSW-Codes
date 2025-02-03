@@ -1,5 +1,6 @@
 // Shallow copy is this. Here updating values in one object changes the value in other object as well.
 // Deep copy is where changing values in one object does not change values in other object. Though they belong to the same class.
+// In ASS_1_3 deep copy concept is used.
 public class question {
     public static void main(String[] args) {
         Point1 obj = new Point1(9, 6);
