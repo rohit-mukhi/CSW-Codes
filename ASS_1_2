@@ -1,0 +1,46 @@
+public class ASS_1_2 {
+    public static void main(String[] args) {
+        Rectangle obj = new Rectangle(2, 3);
+        obj.area();
+        obj.perimeter();
+
+        obj.setLength(98.7);
+        obj.setWidth(56.98);
+        obj.area();
+        obj.perimeter();
+    }
+}
+
+class Rectangle {
+    private double length;
+    private double width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    void setLength(double length) {
+        this.length = length;
+    }
+
+    void setWidth(double width) {
+        this.width = width;
+    }
+
+    void getLength() {
+        System.out.println("Length is : " + length);
+    }
+
+    void getWidth() {
+        System.out.println("Width is : " + width);
+    }
+
+    void area() {
+        System.out.println("Area = " + (length*width));
+    }
+
+    void perimeter() {
+        System.out.println("Perimeter = " + (2*(length+width)));
+    }
+}
