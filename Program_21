@@ -4,7 +4,14 @@ public class Program_21 {
     public static void main(String[] args) {
         Child obj = new Child();
         obj.show();
+        // Simplest way to call method of parent class is to create an object of parent class and then call it
 
+        // Lets see concept of casting to achieve the previous result
+        Parent objp = new Parent();
+        Parent objc = new Child();
+        // objc is not a pure object. It can only access those methods that are overidden
+        objp.show();
+        objc.show();
     }
 }
 
