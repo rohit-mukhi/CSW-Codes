@@ -7,8 +7,6 @@ public class ASS_1_2 {
         System.out.println();
         obj.setLength(98.7);
         obj.setWidth(56.98);
-        obj.getLength();
-        obj.getWidth();
         System.out.println("Area = " + obj.area(obj.getLength(), obj.getWidth()));
         System.out.println("Perimeter = " + obj.perimeter(obj.getLength(), obj.getWidth()));
     }
