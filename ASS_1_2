@@ -6,6 +6,8 @@ public class ASS_1_2 {
 
         obj.setLength(98.7);
         obj.setWidth(56.98);
+        obj.getWidth();
+        obj.getLength();
         obj.area();
         obj.perimeter();
     }
