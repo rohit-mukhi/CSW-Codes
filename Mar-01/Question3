@@ -1,0 +1,27 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Collections;
+
+public class Question3 implements Comparable<Question3> {
+    String name, roll;
+    public Question3(String name, String roll) {
+        this.name = name;
+        this.roll = roll;
+    }
+
+    public int compareTo(Question3 other) {
+        return this.roll.compareTo(other.roll);
+    }
+
+    @Override
+    public String toString() {
+        return roll + " " + name;
+    }
+
+    public static void main(String[] args) {
+        List<Question3> list = Arrays.asList(new Question3("Orthos", "2"), new Question3("Porthos", "3"), new Question3("Aramis", "1"));
+
+        Collections.sort(list);
+        System.out.println(list);
+    }
+}
