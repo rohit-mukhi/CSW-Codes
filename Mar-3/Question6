@@ -1,0 +1,29 @@
+
+import java.util.Objects;
+
+public class Question6 {
+    public static void main(String[] args) {
+        Animal obj = new Animal("Cat", "white", "British");
+        System.out.println(obj.toString());
+    }
+}
+
+class Animal {
+    private String name, color, type;
+
+    Animal(String name, String color, String type) {
+        this.name = name;
+        this.color = color;
+        this.type = type;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, color, type);
+    }
+
+    @Override
+    public String toString() {
+        return "name : " + name + " color : " + color + " type : " + type + "Hash code : " + hashCode();
+    }
+}
