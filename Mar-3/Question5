@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+public class Question5 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Students arr[] = new Students[50];
+        int idx = 0;
+        char ch = 'y';
+        while(idx < 10 && ch=='y') {
+            System.out.print("Name : ");
+            String name = scan.next();
+            System.out.print("Roll no : ");
+            int roll = scan.nextInt();
+            System.out.print("Marks : ");
+            double marks = scan.nextDouble();
+            arr[idx++] = new Students(name, roll, marks);
+            System.out.print("Do you want to continue : ");
+            ch = scan.next().charAt(0);
+            ch = Character.toLowerCase(ch);
+        }
+        // Bubble sort begins here
+        for(int i=0; i<idx; i++) {
+            for(int j=i+1; j<idx-i; j++) {
+                if(arr[i].compareTo(arr[j]) > 0) {
+                    Students temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+
+        System.out.println();
+        System.out.println("Student Details Sorted : ");
+
+        for(int i=0; i<idx; i++) {
+            System.out.println("Name : " + arr[i].getName() + "\nRoll no : " + arr[i].getRoll() + "\nMarks : " + arr[i].getMarks());
+            System.out.println();
+        }
+
+        scan.close();
+    }
+}
+
+class Students implements Comparable<Students> {
+    private String name;
+    private int roll;
+    private double marks;
+
+    Students(String name, int roll, double marks) {
+        this.name = name;
+        this.roll = roll;
+        this.marks = marks;
+    }
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    void setRoll(int roll) {
+        this.roll = roll;
+    }
+
+    void setMarks(double marks) {
+        this.marks = marks;
+    }
+
+    String getName() {
+        return this.name;
+    }
+
+    int getRoll() {
+        return this.roll;
+    }
+
+    double getMarks() {
+        return this.marks;
+    }
+
+    @Override 
+    public int compareTo(Students other) {
+    //    if(this.roll > other.getRoll()) return 1;
+    //    else return 0;
+
+    return Integer.compare(this.roll, other.roll);
+    }
+}
+
+
+
