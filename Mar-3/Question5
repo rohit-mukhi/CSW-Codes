@@ -1,4 +1,3 @@
-// Check why last element is not sorting
 import java.util.Scanner;
 
 public class Question5 {
