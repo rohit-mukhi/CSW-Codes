@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Question6 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter size of array : ");
+        int size = scan.nextInt();
+        int arr[] = new int[size];
+
+        try {
+            System.out.print("Enter index : ");
+            int index = scan.nextInt();
+            if(index >= arr.length) throw new ArrayIndexOutOfBoundsException("Array size exceeded!");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
+        }
+
+        scan.close();
+    }
+}
