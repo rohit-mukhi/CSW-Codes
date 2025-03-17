@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Question5 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        try {
+                System.out.print("Enter a number : ");
+                String num = scan.next();
+                int number = Integer.parseInt(num);
+                try {
+                    if(number <= 0) { 
+                        throw new ArithmeticException("Only numbers integer greater than 0 are allowed.");
+                    } else {
+                        System.out.println("The square root of the number is : " + Math.sqrt(number));
+                    }
+                } catch(ArithmeticException e) {
+                    System.out.println("Arithmetic Exception: " + e.getMessage());
+                }
+        } catch(NumberFormatException e) {
+            System.out.println("NumberFormatException: Invalid input");
+        }
+        scan.close();
+    }
+}
