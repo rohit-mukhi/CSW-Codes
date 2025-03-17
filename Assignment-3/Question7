@@ -1,0 +1,120 @@
+// Complete the code on your own
+
+import java.util.Scanner;
+
+public class Question7 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Matrix 1: ");
+        System.out.print("Enter number of rows : ");
+        int rows1 = scan.nextInt();
+        System.out.print("Enter number of columns : ");
+        int columns1 = scan.nextInt();
+        int arr1[][] = new int[rows1][columns1];
+
+        System.out.println("Matrix 2: ");
+        System.out.print("Enter number of rows : ");
+        int rows2 = scan.nextInt();
+        System.out.print("Enter number of columns : ");
+        int columns2 = scan.nextInt();
+        int arr2[][] = new int[rows2][columns2];
+
+        System.out.println("Matrix 1 : ");
+        for(int i=0; i<arr1.length;i++) {
+            System.out.print("Enter row " + i + " (Separated by spaces) : ");
+            for(int j=0; j<arr1[0].length;j++) {
+                arr1[i][j] = scan.nextInt();
+            }
+        }
+
+        System.out.println("Matrix 2 : ");
+        for(int i=0; i<arr2.length;i++) {
+            System.out.print("Enter row " + i + " (Separated by spaces) : ");
+            for(int j=0; j<arr2[0].length;j++) {
+                arr2[i][j] = scan.nextInt();
+            }
+        }
+
+        try {
+            System.out.println("Sum of matrices : ");
+           add(arr1, arr2);
+        } catch (RowsColumnsUnequalException e) {
+            System.out.println(e.getMessage());
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
+        }
+
+        try {
+            System.out.println("Product of matrices : ");
+            multiply(arr1, arr2);
+        } catch (RowsColumnsUnequalException e) {
+            System.out.println(e.getMessage());
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
+        }
+
+        try {
+            System.out.print("Enter search row : ");
+            int searchRow = scan.nextInt();
+            System.out.print("Enter search column : ");
+            int searchCol = scan.nextInt();
+            if(searchCol >= columns1 || searchRow >= rows1) throw new ArrayIndexOutOfBoundsException("Array size exceeded");
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException: " + e.getMessage());
+        }
+
+        scan.close();
+    }
+
+    public static void add(int[][] arr1, int[][] arr2) throws RowsColumnsUnequalException {
+        if(arr1.length != arr2.length || arr1[0].length != arr2[0].length) {
+            throw new RowsColumnsUnequalException("Rows and columns are not equal.");
+        }
+
+        int sum[][] = new int[arr1.length][arr1[0].length];
+
+        for(int i=0; i<arr1.length; i++) {
+            for(int j=0; j<arr1[0].length;j++) {
+                sum[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+
+        for(int i=0; i<arr1.length; i++) {
+            for(int j=0; j<arr1[0].length;j++) {
+                System.out.print(sum[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void multiply(int[][] arr1, int[][] arr2) throws RowsColumnsUnequalException {
+        if(arr1[0].length != arr2.length) {
+            throw new RowsColumnsUnequalException("Rows of one array is not equal to columns of other array");
+        }
+
+        int product[][] = new int[arr1.length][arr2[0].length];
+
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr2[0].length; j++) {
+                for (int k = 0; k < arr2.length; k++)
+                    product[i][j] += arr1[i][k] * arr2[k][j];
+            }
+        }
+
+
+        for(int i=0; i<product.length;i++) {
+            for(int j=0; j<product[0].length;j++) {
+                System.out.print(product[i][j] + " ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+class RowsColumnsUnequalException extends Exception {
+    public RowsColumnsUnequalException(String message) {
+        super(message);
+    }
+}
