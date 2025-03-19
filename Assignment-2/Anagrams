@@ -1,0 +1,56 @@
+import java.util.HashMap;
+
+public class Anagrams {
+    public static void main(String[] args) {
+        String str1 = "Tom Marvolo Riddle";
+        String str2 = "I am Lord Voldemort";
+
+        str1 = str1.toLowerCase();
+        str2 = str2.toLowerCase();
+
+        HashMap<Character, Integer> string1 = new HashMap<>();
+        HashMap<Character, Integer> string2 = new HashMap<>();
+
+        for(int i=0; i<str1.length();i++) {
+           char currentChar = str1.charAt(i);
+           if(currentChar == ' ') {
+                continue;
+           } else {
+                Integer currentCount = string1.getOrDefault(currentChar, 0);
+                string1.put(currentChar, currentCount+1);
+           }
+        }
+
+
+        for(int i=0; i<str2.length();i++) {
+            char currentChar = str2.charAt(i);
+            if(currentChar == ' ') {
+                 continue;
+            } else {
+                 Integer currentCount = string2.getOrDefault(currentChar, 0);
+                 string2.put(currentChar, currentCount+1);
+            }
+         }
+
+         boolean flag = true;
+
+          if(string1.size() != string2.size()) {
+               flag = false;
+          } else {
+               for(Character ch : string1.keySet()) {
+                    if(string2.containsKey(ch) && string1.get(ch).equals(string2.get(ch))) {
+                         continue;
+                    } else {
+                         flag = false;
+                         break;
+                    }
+               }
+          }
+
+          if(flag) {
+               System.out.println("The strings are anagrams");
+          } else {
+               System.out.println("The strings are not anagrams");
+          }
+    }
+}
