@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class LambdaComparatorExample {
+    public static void main(String[] args) {
+        List<StudentR> students = Arrays.asList(
+            new StudentR("Rohit", 36, 98),
+            new StudentR("Tony", 3, 95),
+            new StudentR("Peter", 10, 89)
+        );
+
+        students.sort((s1, s2) -> Integer.compare(s1.getMarks(), s2.getMarks()));
+        System.out.println("Sorted by marks : " + students);
+        students.sort(Comparator.comparing(s -> s.getName()));
+        System.out.println("Sorted by name : " + students);
+    }
+}
+
+class StudentR {
+    private int roll, marks;
+    private String name;
+
+    StudentR(String name, int roll, int marks) {
+        this.name = name;
+        this.roll = roll;
+        this.marks = marks;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public int getRoll() {
+        return this.roll;
+    }
+
+    public int getMarks() {
+        return this.marks;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + "|" + this.getRoll();
+    }
+}
