@@ -1,0 +1,16 @@
+import java.util.PriorityQueue;
+
+public class MinHeaps {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 10, 8, 7, 3, 4, 6, 5, 9};
+        PriorityQueue<Integer> numList = new PriorityQueue<>();
+        for(int val : arr) {
+            numList.add(val);
+        }
+
+        while(!numList.isEmpty()) {
+            System.out.print(numList.poll() + " ");
+        }
+        System.out.println();
+    }
+}
