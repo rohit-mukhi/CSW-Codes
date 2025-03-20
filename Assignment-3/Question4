@@ -1,16 +1,8 @@
-import java.util.Scanner;
 public class Question4 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
+        int val = 10;
         try {
-            System.out.print("Enter a number : ");
-            int num = scan.nextInt();
-            if(num < 0) {
-                throw new ArithmeticException("Negative numbers cannot have square root.");
-            } else {
-                double srt = Math.sqrt(num);
-                System.out.println("Square root of " + num + " is " + srt);
+           System.out.println(val/0);
             } 
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
