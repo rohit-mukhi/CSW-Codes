@@ -1,0 +1,18 @@
+public class Question5 {
+    public static void main(String[] args) {
+        try {
+            methodA();
+        } catch(Exception e) {
+            System.out.println("Exception caught in main method");
+        }
+    }
+
+    public static void methodA() throws Exception {
+        try {
+            throw new Exception("Original exception");
+        } catch(Exception e) {
+            System.out.println("Caught exception in methodA: " + e.getMessage());
+            throw e;
+        }
+    }
+}
