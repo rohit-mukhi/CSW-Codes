@@ -1,0 +1,19 @@
+// Example of custom Exception
+
+public class Question7 {
+    public static void main(String[] args) {
+        int age = 15;
+        try {
+            if(age < 18)
+                throw new CustomException("Division by 0 is not allowed");
+        } catch (CustomException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+class CustomException extends Exception {
+    CustomException(String message) {
+        super(message);
+    }
+}
