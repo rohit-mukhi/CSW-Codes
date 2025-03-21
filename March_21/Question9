@@ -1,4 +1,4 @@
-// finalize() method is deprecated and will be removed from java in near future
+// finalize() method is deprecated and is removed from latest java version
 public class Question9 {
     public static void main(String[] args) {
         new Question9();
