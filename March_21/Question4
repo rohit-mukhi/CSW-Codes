@@ -1,3 +1,5 @@
+// This is example of Throwable class
+
 public class Question4 {
     public static void main(String[] args) {
         int result = 0;
