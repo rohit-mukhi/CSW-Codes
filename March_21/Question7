@@ -3,7 +3,7 @@ public class Question7 {
         int age = 15;
         try {
             if(age < 18)
-                throw new CustomException("Division by 0 is not allowed");
+                throw new CustomException("Underage!");
         } catch (CustomException e) {
             System.out.println(e.getMessage());
             System.out.println(e.toString());
