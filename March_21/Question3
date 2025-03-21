@@ -1,0 +1,18 @@
+public class Question2 {
+    public static void main(String[] args) {
+        int age = 16;
+        checkAge(age);
+    }
+
+    public static void checkAge(int age) {
+        try {
+            if(age < 18) {
+                throw new IllegalArgumentException("Underage!");
+            } else {
+                System.out.println("Welcome to 18+ world!");
+            }
+        } catch(IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
