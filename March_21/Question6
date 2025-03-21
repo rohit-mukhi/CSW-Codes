@@ -1,4 +1,4 @@
-// Write about the ways of reporting the Exception
+// Write about the ways to report the Exception
 
 public class Question6 {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class Question6 {
         } catch (ArithmeticException e) {
             System.out.println(e.toString());
             System.out.println(e.getMessage());
-            System.out.println(e.getStackTrace());
+            e.printStackTrace();
         }
     }    
 }
