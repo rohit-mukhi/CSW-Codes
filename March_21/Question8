@@ -1,0 +1,18 @@
+// Look for Garbage Collection in java
+
+public class Question8 {
+    public static void main(String[] args) {
+        String s1 = new String("Hello");
+        s1 = null;
+        Person p1 = new Person("Tony Stark");
+        Person p2 = new Person("Peter Parker");
+        p1 = p2;
+    }
+}
+
+class Person {
+    String name;
+    Person(String name) {
+        this.name = name;
+    }
+}
