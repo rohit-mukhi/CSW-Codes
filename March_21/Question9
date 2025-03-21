@@ -13,3 +13,4 @@ public class Question9 {
 }
 // The finalize() method was not called but it was invoked.
 // This is because it is a method included in the gc()
+// gc() is a method of the System class
