@@ -1,0 +1,15 @@
+// finalize() method is deprecated nd will be removed from java in near future
+public class Question9 {
+    public static void main(String[] args) {
+        new Question9();
+        System.gc();
+        System.out.println("Garbage collection requested"); 
+    }
+
+    @Override
+    protected void finalize() {
+        System.out.println("Finalize method was called");
+    }
+}
+// The finalize() method was not called but it was invoked.
+// This is because it is a method included in the gc()
