@@ -1,5 +1,3 @@
-// Look for Garbage Collection in java
-
 public class Question8 {
     public static void main(String[] args) {
         String s1 = new String("Hello");
@@ -7,6 +5,10 @@ public class Question8 {
         Person p1 = new Person("Tony Stark");
         Person p2 = new Person("Peter Parker");
         p1 = p2;
+        System.out.println(s1);
+        System.out.println(p1);
+        System.out.println(p2);
+        // In the above line p2 is devoured by p1. So data of p2 is copied to p1 but the memory location of p1 is used. Since, p2 got devoured, p2 will be sent to garbage collector
     }
 }
 
