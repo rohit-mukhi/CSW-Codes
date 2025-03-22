@@ -1,3 +1,6 @@
+// Try to write the same code using cleaner api
+// That will be Question 4
+
 public class Question3 {
     public static void main(String[] args) {
         MyClass obj1 = new MyClass("Main Object 1");
