@@ -1,4 +1,4 @@
-public class ASS4_Q1 {
+public class Question3 {
     public static void main(String[] args) {
         MyClass obj1 = new MyClass("Main Object 1");
         MyClass obj2 = new MyClass("Main Object 2");
