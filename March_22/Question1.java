@@ -6,9 +6,13 @@ public class Question1 {
         MyClass obj2 = new MyClass(20);
         System.out.println(obj1);
         System.out.println(obj2);
+        System.out.println(obj1.val);
+        System.out.println(obj2.val);
         obj1 = obj2;
         System.out.println(obj1);
         System.out.println(obj2);
+        System.out.println(obj1.val);
+        System.out.println(obj2.val);
     }
 }
 
