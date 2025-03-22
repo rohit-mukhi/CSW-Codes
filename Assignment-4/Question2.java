@@ -3,6 +3,7 @@ import java.lang.ref.Cleaner;
 public class Question2 {
     public static void main(String[] args) {
         UnreachableObject obj = new UnreachableObject("MainObject");
+        obj.show();
         obj = null;
         System.gc();
         try {
