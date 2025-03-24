@@ -22,17 +22,18 @@ public class Question6 {
         List<Question6> objectList = new ArrayList<>();
         
         SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
-        printMemoryUsage(run, sdf, "At start : ");
+        printMemoryUsage(run, sdf, " At start : ");
 
         for(int i=0; i<100000; i++) {
             objectList.add(new Question6(1000));
             if(i%10000 == 0) {
-                printMemoryUsage(run, sdf, "After creating " + i + " Objects");
+                printMemoryUsage(run, sdf, " After creating " + i + " Objects");
+                System.out.println();
             }
         }
 
         objectList.clear();
         System.gc();
-        printMemoryUsage(run, sdf, "After clearing the list");
+        printMemoryUsage(run, sdf, " After clearing the list");
       }
 }
