@@ -14,5 +14,8 @@ public class Question4 {
 
         String str4 = "Hello" + " World";
         System.out.println(System.identityHashCode(str4));
+
+        String str5 = "Hello".concat(" World");
+        System.out.println(System.identityHashCode(str5));
     }
 }
