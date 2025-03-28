@@ -1,4 +1,5 @@
 // We can see all the locations are different
+// We are working with literals
 
 public class Question4 {
     public static void main(String[] args) {
