@@ -1,3 +1,5 @@
+// This program shows the implementation of CharSequence interface
+
 public class Question6 {    
     public static void main(String[] args) {
         CharSequence chs = "HPKILY";
