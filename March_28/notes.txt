@@ -1,0 +1,4 @@
+There are 3 interfaces needed for string :
+1) Comparable
+2) Charsequence
+3) Serializable
