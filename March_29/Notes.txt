@@ -1,0 +1,3 @@
+We use stringbuilder and stringbuffer to create mutable strings.
+buffer is sychronized, thread safe and slower, works with single-threading
+builder is non-sychronized, not thread safe and faster, multi-threaded
