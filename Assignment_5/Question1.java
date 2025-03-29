@@ -10,5 +10,17 @@ public class Question4 {
         System.out.println("Memory Address (str2) : " + System.identityHashCode(str2));
         System.out.println("Memory Address (str3) : " + System.identityHashCode(str3));
         System.out.println("Memory Address (str4) : " + System.identityHashCode(str4));
+
+        System.out.println();
+
+        System.out.println("str1 == str2 : " + str1==str2);
+        System.out.println("str1 == str3 : " + str1==str3);
+        System.out.println("str3 == str4 : " + str3==str4);
+
+        System.out.println();
+
+        System.out.println("str1.equals(str2) : " + str1.equals(str2));
+        System.out.println("str1.equals(str3) : " + str1.equals(str3));
+        System.out.println("str3.equals(str4) : " + str3.equals(str4));
     }    
 }
