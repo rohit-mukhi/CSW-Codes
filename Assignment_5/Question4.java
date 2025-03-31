@@ -18,20 +18,29 @@ public class Question4 {
                         char chs[] = str.toCharArray();
                         System.out.println("Enter start index : ");
                         s = scan.nextInt();
-                        obj.append(chs, s, chs.length);
+                        if(s>obj.toString().length())
+                            System.out.println("Invalid index");
+                        else
+                            obj.append(chs, s, chs.length);
                         break;
                 case 2: System.out.print("Enter start and end indices for deletion : ");
                         s = scan.nextInt();
                         e = scan.nextInt();
+                        if(s<0 || e > obj.toString().length() || s>obj.toString().length())
+                            System.out.println("Index out of bound!");
+                        else
                         obj.delete(s-1, e-1);
                         break;
                 case 3: System.out.print("Enter start and end indices and word to replace : ");
                         s = scan.nextInt();
-                        e = scan.nextInt();
+                        e = scan.nextInt();                        
                         str = scan.next();
+                         if(s<0 || e > obj.toString().length() || s>obj.toString().length())
+                            System.out.println("Index out of bound!");
+                        else
                         obj.replace(s-1, s-1, str);
                         break;
-                case 4: System.out.println("Enter word to concat at end : ");
+                case 4: System.out.print("Enter word to concat at end : ");
                         str = scan.next();
                         obj.append(str);
                         break;
@@ -45,7 +54,6 @@ public class Question4 {
             ch = scan.next().charAt(0);
             ch = Character.toLowerCase(ch);
         }
-        System.out.println();
         System.out.println("See you again!");
         scan.close();
        
