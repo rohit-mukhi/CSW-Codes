@@ -1,5 +1,3 @@
-// Check this code, it may not be correct
-
 import java.util.ArrayList;
 import java.util.List;
 import java.text.SimpleDateFormat;
@@ -12,7 +10,7 @@ public class Question7 {
         long totalMemory = run.totalMemory()/(1024*1024);
         long usedMemory = (totalMemory - freeMemory)/(1024*1024);
         String timeStamp = sdf.format(new Date());
-        System.out.printf("[%s] %s - Total heap : %d MB | Free heap : %d MB | Used heap : %d MB%n", timeStamp, totalMemory, freeMemory, usedMemory);
+        System.out.printf("[%s]%s - Total heap : %d MB | Free heap : %d MB | Used heap : %d MB%n", timeStamp, label, totalMemory, freeMemory, usedMemory);
     }
     public static void main(String[] args) {
         Runtime run = Runtime.getRuntime();
