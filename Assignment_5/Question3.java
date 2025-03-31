@@ -9,7 +9,7 @@ public class Question3 {
         String str;
         int s, e;
         while(ch == 'y') {
-            System.out.print("Enter operation (1-append, 2-delete, 3-replace, 4-reverse, 5-insert, 6-display) : ");
+            System.out.print("Enter operation (1-append, 2-delete, 3-replace, 4-reverse, 5-insert, 6-display, 7-Lowercase, 8-Uppercase) : ");
             int op = scan.nextInt();
             switch(op) {
                 case 1: System.out.print("Enter word to append : ");
@@ -31,11 +31,16 @@ public class Question3 {
                         break;
                 case 5: System.out.print("Enter index and word to insert : ");
                         s = scan.nextInt();
+                        System.out.println("Enter word to insert : ");
                         str = scan.next();
                         obj.insert(s-1, str);
                         break;
                 case 6: System.out.print(obj.toString());
                         System.out.println();
+                        break;
+                case 7: obj.toString().toLowerCase();
+                        break;
+                case 8: obj.toString().toUpperCase();
                         break;
                 default: System.out.print("Invalid input!");
                         break;
@@ -46,8 +51,7 @@ public class Question3 {
         }
         System.out.println();
         System.out.println("See you again!");
-        scan.close();
-       
+        scan.close();   
     }    
 }
 
