@@ -3,7 +3,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class Question8 {
+public class Question1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String filename = "diary.txt";
@@ -16,7 +16,7 @@ public class Question8 {
         System.out.print("Enter your diary entry : ");
         String diaryEntry = scanner.nextLine();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-mm-dd HH:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-mm-yyyy HH:mm:ss");
         String currentDateTime = LocalDateTime.now().format(formatter);
 
         try {
