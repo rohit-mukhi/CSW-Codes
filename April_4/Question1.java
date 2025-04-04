@@ -12,5 +12,12 @@ public class Question1 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        File newFile = new File("sample.txt");
+        if(newFile.exists()) {
+            System.out.println("File exists");
+        } else {
+            System.out.println("File does not exist");
+        }
     }    
 }
