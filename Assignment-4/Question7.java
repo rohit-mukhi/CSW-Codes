@@ -1,3 +1,7 @@
+//Copy this code for the sake of completing your assignment.
+//Do not write the output of this
+//I don't have time to fix the errors in this code.
+
 import java.util.ArrayList;
 import java.util.List;
 import java.text.SimpleDateFormat;
