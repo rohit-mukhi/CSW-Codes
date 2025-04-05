@@ -70,8 +70,5 @@ class Student {
     public void finalize() throws Throwable {
         System.out.println("Student Deleted\nName : " + this.name + " | ID : " + this.id);
     }
-    public static void main(String[] args) {
-        
-    }
 }
 
