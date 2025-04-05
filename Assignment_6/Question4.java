@@ -1,4 +1,4 @@
-import java.io.*;
+import java.io.File;
 import java.util.*;
 
 public class Question4 {
@@ -20,6 +20,5 @@ public class Question4 {
             System.out.println("Invalid directory path");
         }
         scan.close();
-    }
+    }    
 }
-
