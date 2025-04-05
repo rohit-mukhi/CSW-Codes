@@ -1,4 +1,5 @@
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Question8 {
@@ -13,6 +14,8 @@ public class Question8 {
             return;
         }
 
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy hh:mm:ss");
+
         System.out.println("File Metadata : ");
         System.out.println("Name : " + file.getName());
         System.out.println("Absolute path : " + file.getAbsolutePath());
@@ -20,6 +23,9 @@ public class Question8 {
         System.out.println("Readability : " + file.canRead());
         System.out.println("Writeability : " + file.canWrite());
         System.out.println("Executability : " + file.canExecute());
+        System.out.println("Space used : " + (file.getTotalSpace()/(1024*1024*1024)) + " MB");
+        System.out.println("Space free : " + (file.getUsableSpace()/ (1024*1024*1024)) + " MB");
+        System.out.println("File created on : " + sdf.format(file.lastModified()));
         scan.close();
     }
 }
