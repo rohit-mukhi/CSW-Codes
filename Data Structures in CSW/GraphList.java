@@ -4,6 +4,7 @@ public class GraphList {
     int vertices;
     List <Integer> adjList[];
 
+    @SuppressWarnings("unchecked")
     public GraphList(int v) {
         vertices = v;
         adjList = new ArrayList[v];
