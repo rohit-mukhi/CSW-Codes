@@ -67,6 +67,7 @@ public class Question1 {
         System.out.println();
         System.out.print("Postorder traversal : ");
         postorder(root);
+        System.out.println();
     }    
 }
 
