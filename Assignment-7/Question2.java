@@ -13,7 +13,10 @@ public class Question2 {
         };
 
         Calculator <Integer> divide = (a, b) -> {
-            System.out.println("Division result: " + (a/b));
+            if(b == 0)
+                System.out.println("Division by zero is undefined");
+            else
+                System.out.println("Division result: " + (a/b));
         };
 
         addition.calculate(10, 20);
