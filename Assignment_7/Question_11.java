@@ -5,12 +5,17 @@ import java.util.Scanner;
 public class Question5 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        
-        System.out.print("Enter date 1 (yyyy-mm-dd): ");
-        LocalDate date1 = LocalDate.parse(scan.next());
+        LocalDate date1=null;
+        LocalDate date2=null;
+        try {
+            System.out.print("Enter date 1 (yyyy-mm-dd): ");
+            date1 = LocalDate.parse(scan.next());
 
-        System.out.print("Enter date 2 (yyyy-mm-dd): ");
-        LocalDate date2 = LocalDate.parse(scan.next());
+            System.out.print("Enter date 2 (yyyy-mm-dd): ");
+            date2 = LocalDate.parse(scan.next());
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
 
         long days = ChronoUnit.DAYS.between(date1, date2);
 
