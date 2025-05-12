@@ -1,3 +1,5 @@
+// This program uses lambda expression to create a thread
+
 public class Question3 {
     public static void main(String[] args) {
         Thread t2 = new Thread(() -> {
