@@ -3,7 +3,7 @@ public class Question4 {
         int length = 25;
         int breadth = 78;
         Shape rectangle = () -> {
-            return (length+breadth);
+            return (length*breadth);
         };
         System.out.println("Area of reactangle: " + rectangle.printArea());
 
